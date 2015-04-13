@@ -78,13 +78,14 @@ class xml_gen {
 
         if ($user == false) {
             $outxml .= '<webExID>'.$config->apiusername.'</webExID>';
-            $outxml .= '<password>'.self::format_password($config->apipassword).'</password>';
+            $outxml .= '<password>'.$config->apipassword.'</password>';
         } else {
             $outxml .= '<webExID>'.$user->webexid.'</webExID>';
-            $outxml .= '<password>'.self::format_password($user->password).'</password>';
+            $outxml .= '<password>'.$user->password.'</password>';
         }
 
-        $outxml .= '<siteName>'.$config->sitename.'</siteName>';
+        //$outxml .= '<siteName>'.$config->sitename.'</siteName>';
+        $outxml .= '<siteID>5852</siteID>';
 
         $outxml .= '</securityContext></header>';
 
