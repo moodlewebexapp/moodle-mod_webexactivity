@@ -141,6 +141,8 @@ class xml_gen extends \mod_webexactivity\local\type\base\xml_gen {
 
             $xml .= '<startDate>'.$startstr.'</startDate>';
             $xml .= '<openTime>900</openTime>';
+            // GMT+8 China(Beijing)
+            $xml .= '<timeZoneID>45</timeZoneID>';
         }
 
         if (isset($data->duration)) {
